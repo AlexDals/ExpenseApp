@@ -28,12 +28,11 @@ export default function App() {
       <header className="bg-white dark:bg-gray-700 shadow p-4 flex justify-between">
         <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">Expense Report App</h1>
         <button onClick={() => setDarkMode(!darkMode)} className="p-2 bg-gray-200 dark:bg-gray-600 rounded">
-          {darkMode ? <SunIcon className="w-6 h-6 text-yellow-400" /> : <MoonIcon className="w-6 h-6 text-gray-900"/>}
+          {darkMode ? <SunIcon className="w-6 h-6 text-yellow-400"/> : <MoonIcon className="w-6 h-6 text-gray-900"/>}
         </button>
       </header>
       <main className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2 space-y-4"><UploadForm/><ExpenseList/></div>
-        {userRole==='admin'&&<AdminPanel/>}
+        {userRole==='admin' && <AdminPanel/>}
       </main>
     </div>
-); }
