@@ -1,14 +1,12 @@
 import React from 'react';
-import { UploadForm } from './components/UploadForm';
-import { ExpenseList } from './components/ExpenseList';
 
 export default function App() {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>🧾 Expense Report App</h1>
-      <UploadForm />
-      <hr style={{ margin: '2rem 0' }} />
-      <ExpenseList />
+    <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="text-center p-10 bg-gray-100 rounded-xl shadow-lg">
+        <h1 className="text-3xl font-bold text-blue-600">Expense Report App</h1>
+        <p className="text-gray-600 mt-2">Redesigned with TailwindCSS 🚀</p>
+      </div>
     </div>
   );
 }
