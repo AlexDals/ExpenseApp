@@ -4,18 +4,25 @@ import { ExpenseList } from './components/ExpenseList';
 import { AdminPanel } from './components/AdminPanel';
 import { supabase } from './supabase';
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [userRole, setUserRole] = useState(null);
+
   useEffect(() => {
     const root = document.documentElement;
     darkMode ? root.classList.add('dark') : root.classList.remove('dark');
   }, [darkMode]);
+
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => {
-      if (user) supabase.from('users').select('role').eq('id', user.id).single().then(({ data }) => setUserRole(data?.role));
+      if (user) {
+        supabase.from('users').select('role').eq('id', user.id).single()
+          .then(({ data }) => setUserRole(data?.role));
+      }
     });
   }, []);
+
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-800">
       <header className="bg-white dark:bg-gray-700 shadow p-4 flex justify-between">
