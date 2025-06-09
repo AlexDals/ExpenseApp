@@ -86,7 +86,7 @@ export function UploadForm() {
         disabled={!ocrText}
         className="w-full py-2 bg-green-600 dark:bg-green-500 text-white rounded hover:bg-green-700 dark:hover:bg-green-600 transition"
       >
-        Save Expense
+        "Save Expense"
       </button>
     </div>
   );
