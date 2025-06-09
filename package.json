@@ -1,0 +1,19 @@
+{
+  "name": "expense-report-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tesseract.js": "^4.0.2"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}
